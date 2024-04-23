@@ -31,7 +31,7 @@
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/car.png" height="200" width="200"/></div>
+            <div class="image-container"><img id = "car_img" src="img/car.png" height="200" width="200"/></div>
             <div class="image-container"><img id = "control_img" src="img/control.png" height="200" width="200"/></div>
             <div class="image-container"><img src="img/flower.png" height="200" width="200"/></div>
         </div>
@@ -68,4 +68,14 @@ toilet.onpointerleave = () => {
     control.onpointerleave = () => {
         control.src = 'img/control.png'
     }
-    </script>
+</script>
+
+<script>
+    const car = document.getElementById ('car_img')
+    car.onpointerover = () => {
+        car.src = 'img/car2.png'
+    }
+    car.onpointerleave = () => {
+        car.src = 'img/car.png'
+    }
+</script>
