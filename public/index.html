@@ -81,6 +81,9 @@ toilet.onpointerleave = () => {
 </script>
 
 <script>
+     const meow_sound = document.createElement ('audio')
+    meow_sound.src = 'aud/meow.mp3'
+
     const pet = document.getElementById ('pet_img')
     pet.onpointerover = () => {
         pet.src = 'img/pet2.png'
@@ -88,13 +91,6 @@ toilet.onpointerleave = () => {
     pet.onpointerleave = () => {
         pet.src = 'img/pet.png'
     }
-</script>
-
-<script>
-    const meow_sound = document.createElement ('audio')
-    meow_sound.src = 'aud/meow.mp3'
-    
-    const pet = 'img/pet2.png'
     pet.onpointerdown = () => {
         meow_sound.play ()
     }
