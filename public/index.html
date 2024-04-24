@@ -121,12 +121,18 @@ toilet.onpointerleave = () => {
 </script>
 
 <script>
+    const door_sound = document.createElement ('audio')
+    door_sound.src = 'aud/knock.mp3'
+
     const house = document.getElementById ('house_img')
     house.onpointerover = () => {
         house.src = 'img/house2.png' 
     }
     house.onpointerleave = () => {
         house.src = 'img/house.png'
+    }
+    house.onpointerdown = () => {
+        door_sound.play ()
     }
 </script>
 
