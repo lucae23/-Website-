@@ -41,12 +41,18 @@
 </html>
 
 <script>
-    const bottle_sound = document.createElement ('audio')
-    bottle_sound.src = 'aud/bottle_click.mp3'
-    
+    const tvoff_sound = document.createElement ('audio')
+    tvoff_sound.src = 'aud/tvoff.mp3'
+
     const tv = document.getElementById ('tv_img')
+tv.onpointerover = () => {
+    tv.src = 'img/tv2.png'
+}
+tv.onpointerleave = () => {
+    tv.src = 'img/tv.png'
+}
     tv.onpointerdown = () => {
-        bottle_sound.play ()
+        tvoff_sound.play ()
     }
 </script>
 
