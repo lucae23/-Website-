@@ -33,7 +33,7 @@
         <div class="row">
             <div class="image-container"><img id = "car_img" src="img/car.png" height="200" width="200"/></div>
             <div class="image-container"><img id = "control_img" src="img/control.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/flower.png" height="200" width="200"/></div>
+            <div class="image-container"><img id = "flower_img" src="img/flower.png" height="200" width="200"/></div>
         </div>
         
     </body>
@@ -159,5 +159,21 @@ toilet.onpointerleave = () => {
     }
     fridge.onpointerleave = () => {
         fridge.src = 'img/fridge.png'
+    }
+</script>
+
+<script>
+    const buzz_sound = document.createElement ('audio')
+    buzz_sound.src = 'aud/buzz.mp3'
+
+    const flower = document.getElementById ('flower_img')
+    flower.onpointerover = () => {
+        flower.src = 'img/flower2.png' 
+    }
+    flower.onpointerleave = () => {
+        flower.src = 'img/flower.png'
+    }
+    flower.onpointerdown = () => {
+        buzz_sound.play ()
     }
 </script>
