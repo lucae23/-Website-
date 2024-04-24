@@ -71,12 +71,18 @@ toilet.onpointerleave = () => {
 </script>
 
 <script>
+     const horn_sound = document.createElement ('audio')
+    horn_sound.src = 'aud/horn.mp3'
+
     const car = document.getElementById ('car_img')
     car.onpointerover = () => {
         car.src = 'img/car2.png'
     }
     car.onpointerleave = () => {
         car.src = 'img/car.png'
+    }
+    car.onpointerdown = () => {
+        horn_sound.play ()
     }
 </script>
 
