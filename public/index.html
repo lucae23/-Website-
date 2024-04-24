@@ -51,6 +51,9 @@
 </script>
 
 <script>
+ const flush_sound = document.createElement ('audio')
+    flush_sound.src = 'aud/flush.mp3'
+
 const toilet = document.getElementById ('toilet_img')
 toilet.onpointerover = () => {
     toilet.src = 'img/toilet2.png'
@@ -58,6 +61,9 @@ toilet.onpointerover = () => {
 toilet.onpointerleave = () => {
     toilet.src = 'img/toilet.png'
 }
+    toilet.onpointerdown = () => {
+        flush_sound.play ()
+    }
 </script>
 
 <script>
