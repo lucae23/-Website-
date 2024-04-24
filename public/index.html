@@ -125,12 +125,18 @@ toilet.onpointerleave = () => {
 </script>
 
 <script>
+    const bedsheet_sound = document.createElement ('audio')
+    bedsheet_sound.src = 'aud/sheet.mp3'
+
     const bed = document.getElementById ('bed_img')
     bed.onpointerover = () => {
         bed.src = 'img/bed2.png' 
     }
     bed.onpointerleave = () => {
         bed.src = 'img/bed.png'
+    }
+    bed.onpointerdown = () => {
+        bedsheet_sound.play ()
     }
 </script>
 
