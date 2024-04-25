@@ -153,12 +153,18 @@ toilet.onpointerleave = () => {
 </script>
 
 <script>
+    const fridge_sound = document.createElement ('audio')
+    fridge_sound.src = 'aud/fridge.mp3'
+
     const fridge = document.getElementById ('fridge_img')
     fridge.onpointerover = () => {
         fridge.src = 'img/fridge2.png' 
     }
     fridge.onpointerleave = () => {
         fridge.src = 'img/fridge.png'
+    }
+    fridge.onpointerdown = () => {
+        fridge_sound.play ()
     }
 </script>
 
